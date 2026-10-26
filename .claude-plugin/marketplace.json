@@ -15,7 +15,7 @@
       "author": { "name": "Alfredo De Regil" },
       "homepage": "https://github.com/aderegil/tapkit",
       "repository": "https://github.com/aderegil/tapkit",
-      "license": "MIT",
+      "license": "CC-BY-ND-4.0",
       "category": "productivity",
       "keywords": ["teams", "microsoft-teams", "messages", "formatting", "tapkit"]
     }

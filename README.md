@@ -80,4 +80,4 @@ tools/package_skills.py           builds dist/<skill>.zip for releases
 
 ---
 
-Made by Alfredo De Regil. MIT License.
+Made by Alfredo De Regil. Licensed under [CC BY-ND 4.0](LICENSE): free to use and share unchanged, with credit; changed versions may not be shared.
