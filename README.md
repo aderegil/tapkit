@@ -66,17 +66,26 @@ Copy the folder `skills/tap-teams-message` into your skills folder, for example 
 ## Repository layout
 
 ```
-.claude-plugin/marketplace.json   TapKit marketplace for Claude Code
-skills/<skill>/                   one folder per skill (SKILL.md, scripts, assets, references)
+.claude-plugin/marketplace.json   TapKit catalog for Claude Code (one entry per skill)
+skills/<skill>/                   one folder per skill, complete on its own
+shared/                           files every skill uses (App Shell rules, icons)
 docs/images/                      screenshots for this page
-tools/package_skills.py           builds dist/<skill>.zip for releases
+tools/sync_shared.py              copies shared/ into the skills
+tools/package_skills.py           builds dist/<skill>.zip
+.github/workflows/release.yml     attaches every skill zip to each GitHub release
 ```
 
-## Release a new version
+## Add a new skill
 
-1. Update the skill and its version in `.claude-plugin/marketplace.json` and in `CHANGELOG.md`.
-2. Run `python3 tools/package_skills.py`.
-3. Create a GitHub release and attach `dist/<skill>.zip`.
+1. Create `skills/tap-<name>/` with its `SKILL.md`. Copy the shared files it needs from `shared/`.
+2. Add an entry to `.claude-plugin/marketplace.json` (copy the tap-teams-message entry and change name, description, skills path, version and keywords).
+3. Add a row to the skill table and an install link at the top of this page, and a screenshot in `docs/images/`.
+4. Add it to `CHANGELOG.md`.
+
+## Release
+
+1. Update versions in `.claude-plugin/marketplace.json` and `CHANGELOG.md`, and run `python3 tools/sync_shared.py`.
+2. Create a GitHub release (tag like `2026.11.0`). The workflow builds and attaches one zip per skill, so the download links above always point to the latest version of each skill.
 
 ---
 
