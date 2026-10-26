@@ -1,5 +1,7 @@
 # TapKit
 
+**English** · [Español](README.es.md)
+
 **AI skills that give you results on tap.**
 
 TapKit is a collection of skills for Claude. You ask in plain words, and the skill gives you a finished result: a page you can open, check, adjust and use right away. Every TapKit skill name starts with `tap-`.
