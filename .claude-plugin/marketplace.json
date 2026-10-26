@@ -1,0 +1,23 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "tapkit",
+  "description": "TapKit: AI skills that give you results on tap.",
+  "owner": { "name": "Alfredo De Regil" },
+  "plugins": [
+    {
+      "name": "tap-teams-message",
+      "displayName": "tap-teams-message",
+      "description": "Writes formatted Microsoft Teams messages and gives you a page to preview, fill in and copy them, ready to paste.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/tap-teams-message"],
+      "version": "1.0.0",
+      "author": { "name": "Alfredo De Regil" },
+      "homepage": "https://github.com/aderegil/tapkit",
+      "repository": "https://github.com/aderegil/tapkit",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": ["teams", "microsoft-teams", "messages", "formatting", "tapkit"]
+    }
+  ]
+}

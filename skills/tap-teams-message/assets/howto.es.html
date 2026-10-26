@@ -1,0 +1,47 @@
+<div class="cols cols-3">
+  <div class="col">
+    <h2>Paso a paso</h2>
+    <ol>
+      <li>Pídele a Claude un mensaje de Teams con los datos. Dile a dónde va, el tono y cuántos emojis quieres, o deja que Claude elija.</li>
+      <li>Claude genera esta página de inmediato.</li>
+      <li><b>Datos:</b> completa lo que falta. Fechas y horas tienen selector, y cada dato se actualiza en todos los lugares donde aparece.</li>
+      <li><b>Imágenes:</b> pega, arrastra o elige una imagen en su espacio, o inserta una en cualquier lugar al editar.</li>
+      <li><b>Configuración:</b> enciende o apaga emojis, encabezado, llamada a la acción o cierre.</li>
+      <li>Haz clic en <b>Copiar para Teams</b>, haz clic en el cuadro de mensaje de Teams y presiona <kbd>Ctrl</kbd>+<kbd>V</kbd> (Mac: <kbd>⌘</kbd>+<kbd>V</kbd>).</li>
+    </ol>
+    <h3>Cambiar la redacción</h3>
+    <p>Para otro tono, una versión más corta o una publicación de canal, pídeselo a Claude en el chat. Claude vuelve a generar esta página.</p>
+    <h3>Guardar y reusar</h3>
+    <p><b>Descargar</b> guarda esta página con tus cambios. <b>Guardar receta</b> guarda la configuración y la estructura, para que Claude escriba el siguiente mensaje igual.</p>
+    <h3>Lo que no se puede pegar</h3>
+    <p class="muted">@menciones activas, el asunto del canal, la marca de Importante o Urgente, GIFs, stickers, componentes Loop y archivos. Agrégalos en Teams después de pegar.</p>
+  </div>
+  <div class="col">
+    <h2>Qué formato para qué contenido</h2>
+    <table class="playbook">
+      <thead><tr><th>Cuando el mensaje tiene…</th><th>Usa</th></tr></thead>
+      <tbody>
+        <tr><td>Un punto principal</td><td>Una primera línea en negritas con el punto y la fecha</td></tr>
+        <tr><td>Datos en dos dimensiones</td><td>Una tabla (responsable, tarea, fecha)</td></tr>
+        <tr><td>Pasos en orden</td><td>Una lista numerada</td></tr>
+        <tr><td>Puntos separados</td><td>Una lista con viñetas, un emoji por línea</td></tr>
+        <tr><td>Texto para copiar</td><td>Un bloque de texto: se selecciona con triple clic</td></tr>
+        <tr><td>Una decisión o advertencia</td><td>Un bloque de cita</td></tr>
+        <tr><td>Un estatus</td><td>Un chip: verde, ámbar o rojo</td></tr>
+        <tr><td>Algo que hacer</td><td>Una llamada a la acción con 👉 y un enlace</td></tr>
+        <tr><td>Una palabra clave</td><td>Negritas, color o resaltado, con moderación</td></tr>
+      </tbody>
+    </table>
+    <h3>Configuración que puedes pedir</h3>
+    <p class="muted">A dónde va (chat 1:1, chat grupal, chat de reunión, canal), tono (formal, amable, festivo, urgente), emojis (ninguno, pocos, muchos), encabezado, llamada a la acción, cierre y largo.</p>
+  </div>
+  <div class="col">
+    <h2>Lo que Teams puede mostrar</h2>
+    <div class="showcase">
+      <div class="showcase-head"><span>Cópialo y pégalo en un chat contigo mismo</span><button class="btn" type="button" id="btn-copy-showcase">Copiar ejemplo</button></div>
+      <div class="teams" data-preview="light"><div class="t-bubble"><div class="t-msg" id="showcase-msg">
+<!--SHOWCASE-->
+      </div></div></div>
+    </div>
+  </div>
+</div>
