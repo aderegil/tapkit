@@ -35,7 +35,7 @@ The page works in English and Spanish.
 
 ### Claude (web and desktop app)
 
-1. Download **[tap-teams-message.zip](https://github.com/aderegil/tapkit/releases/latest/download/tap-teams-message.zip)** from the latest release.
+1. Download **[tap-teams-message.zip](https://github.com/aderegil/tapkit/releases/latest/download/tap-teams-message.zip)** from the latest release. The release also has **tap-teams-message.skill**, the same skill in the file type Claude uses for skills; if you open it inside a Claude chat, Claude can offer to add it for you.
 2. Make sure code execution is on: **Settings > Capabilities > Code execution and file creation**. On Team and Enterprise plans, an owner turns it on for the organization.
 3. Go to **Customize > Skills**, select **+**, then **Create skill > Upload a skill**, and choose the zip.
 4. Turn the skill on.
@@ -73,7 +73,7 @@ skills/<skill>/                   one folder per skill, complete on its own
 shared/                           files every skill uses (App Shell rules, icons)
 docs/images/                      screenshots for this page
 tools/sync_shared.py              copies shared/ into the skills
-tools/package_skills.py           builds dist/<skill>.zip
+tools/package_skills.py           builds dist/<skill>.zip and .skill
 .github/workflows/release.yml     attaches every skill zip to each GitHub release
 ```
 

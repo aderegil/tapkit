@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Zip each skill in skills/ into dist/<skill>.zip, ready to upload to Claude or attach to a GitHub release.
+"""Zip each skill in skills/ into dist/<skill>.zip and dist/<skill>.skill, ready to upload to Claude or attach to a GitHub release.
+
+The .skill file is the same zip with the extension Claude uses for skill files; the .zip is what the upload page documents.
 
 Usage: python3 tools/package_skills.py [skill-name ...]
 Each zip holds the skill folder itself (tap-teams-message/SKILL.md, ...), the layout Claude expects.
 """
-import sys, zipfile
+import sys, shutil, zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -23,9 +25,10 @@ def package(skill: Path) -> Path:
             if f.is_dir() or f.name in SKIP_FILES or SKIP_DIRS & set(rel.parts) or f.suffix == ".pyc":
                 continue
             z.write(f, Path(skill.name) / rel)
+    shutil.copyfile(out, DIST / f"{skill.name}.skill")
     return out
 
 names = sys.argv[1:] or sorted(p.name for p in SKILLS.iterdir() if p.is_dir())
 for name in names:
     out = package(SKILLS / name)
-    print(f"{out.relative_to(ROOT)}  ({out.stat().st_size // 1024} KB)")
+    print(f"{out.relative_to(ROOT)} and .skill  ({out.stat().st_size // 1024} KB)")

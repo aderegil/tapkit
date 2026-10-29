@@ -1,4 +1,4 @@
-# When you publish a GitHub release, build one zip per skill and attach them all.
+# When you publish a GitHub release, build one .zip and one .skill per skill and attach them all.
 # The README links use releases/latest/download/<skill>.zip, so every release carries every skill.
 name: Release zips
 on:
@@ -21,4 +21,4 @@ jobs:
       - name: Attach zips to the release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release upload "${{ github.event.release.tag_name }}" dist/*.zip --clobber
+        run: gh release upload "${{ github.event.release.tag_name }}" dist/*.zip dist/*.skill --clobber

@@ -35,7 +35,7 @@ La página funciona en español y en inglés, según el idioma en que le pidas e
 
 ### Claude (web y app de escritorio)
 
-1. Descarga **[tap-teams-message.zip](https://github.com/aderegil/tapkit/releases/latest/download/tap-teams-message.zip)** del release más reciente.
+1. Descarga **[tap-teams-message.zip](https://github.com/aderegil/tapkit/releases/latest/download/tap-teams-message.zip)** del release más reciente. El release también trae **tap-teams-message.skill**, la misma skill en el tipo de archivo que Claude usa para skills; si lo abres dentro de un chat de Claude, Claude puede ofrecerte agregarla.
 2. Revisa que la ejecución de código esté activa: **Settings > Capabilities > Code execution and file creation**. En planes Team y Enterprise la activa un administrador para toda la organización.
 3. Ve a **Customize > Skills**, haz clic en **+**, luego **Create skill > Upload a skill**, y elige el zip.
 4. Activa la skill.
